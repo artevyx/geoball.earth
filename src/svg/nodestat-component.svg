@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1917 1917" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;">
+    <g id="nodestat">
+        <g id="view-thumbnail">
+            <circle id="bg-frame" cx="958.333" cy="958.333" r="958.333"/>
+            <path d="M958.333,0c528.919,0 958.334,429.415 958.334,958.333c-0,528.919 -429.415,958.334 -958.334,958.334c-528.918,-0 -958.333,-429.415 -958.333,-958.334c-0,-528.918 429.415,-958.333 958.333,-958.333Zm0,50c-501.322,0 -908.333,407.011 -908.333,908.333c0,501.323 407.011,908.334 908.333,908.334c501.323,-0 908.334,-407.011 908.334,-908.334c-0,-501.322 -407.011,-908.333 -908.334,-908.333Z" style="fill:#fff;"/>
+            <g id="thumbnail-image">
+                <rect x="75" y="74.02" width="1766.67" height="1766.67" style="fill:#808080;fill-opacity:0;"/>
+                <g>
+                    <circle id="image-mask" cx="958.333" cy="957.353" r="858.333"/>
+                    <path d="M958.333,74.02c487.525,-0 883.334,395.808 883.334,883.333c-0,487.525 -395.809,883.333 -883.334,883.333c-487.525,0 -883.333,-395.808 -883.333,-883.333c-0,-487.525 395.808,-883.333 883.333,-883.333Zm0,25c-473.727,-0 -858.333,384.606 -858.333,858.333c-0,473.727 384.606,858.333 858.333,858.333c473.727,0 858.334,-384.606 858.334,-858.333c-0,-473.727 -384.607,-858.333 -858.334,-858.333Z" style="fill:#fff;"/>
+                </g>
+            </g>
+        </g>
+        <g id="type-indicator">
+            <g style="filter:url(#_Effect1);">
+                <path id="h-div-shadow" d="M100,958.333l1716.67,0" style="fill:none;stroke:#000;stroke-width:50px;"/>
+            </g>
+            <path id="h-div" d="M100,958.333l1716.67,0" style="fill:none;stroke:#fff;stroke-width:12.5px;"/>
+            <g id="default-blank">
+                <g style="filter:url(#_Effect2);">
+                    <path id="default-blank-shadow" d="M1108.33,884.333l0,150c0,41.394 -33.606,75 -75,75l-150,0c-41.393,0 -75,-33.606 -75,-75l0,-150c0,-41.393 33.607,-75 75,-75l150,0c41.394,0 75,33.607 75,75Z"/>
+                    <path d="M1133.33,884.333l0,150c0,55.192 -44.808,100 -100,100l-150,0c-55.191,0 -100,-44.808 -100,-100l0,-150c0,-55.191 44.809,-100 100,-100l150,0c55.192,0 100,44.809 100,100Zm-25,0c0,-41.393 -33.606,-75 -75,-75l-150,0c-41.393,0 -75,33.607 -75,75l0,150c0,41.394 33.607,75 75,75l150,0c41.394,0 75,-33.606 75,-75l0,-150Z"/>
+                </g>
+                <path id="default-blank-icon" d="M1108.33,884.333l0,150c0,41.394 -33.606,75 -75,75l-150,0c-41.393,0 -75,-33.606 -75,-75l0,-150c0,-41.393 33.607,-75 75,-75l150,0c41.394,0 75,33.607 75,75Z" style="stroke:#fff;stroke-width:12.5px;"/>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <filter id="_Effect1" filterUnits="userSpaceOnUse" x="21" y="879.333" width="1874.67" height="158">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="9"/>
+        </filter>
+        <filter id="_Effect2" filterUnits="userSpaceOnUse" x="729.333" y="730.333" width="458" height="458">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="9"/>
+        </filter>
+    </defs>
+</svg>

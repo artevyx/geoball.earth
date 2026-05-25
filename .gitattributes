@@ -1,0 +1,2 @@
+# Large-File Storage Configuration
+*.wav filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="2400.0px" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 2400 2400" width="2400.0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<path d="M1199.96 865.222C1014.26 865.222 863.732 1015.77 863.732 1201.47C863.732 1387.18 1014.26 1537.7 1199.96 1537.7C1385.66 1537.7 1536.21 1387.18 1536.21 1201.47C1536.21 1015.77 1385.66 865.222 1199.96 865.222ZM1199.96 1060.47C1277.83 1060.47 1340.97 1123.6 1340.97 1201.47C1340.97 1279.35 1277.83 1342.46 1199.96 1342.46C1122.09 1342.46 1058.97 1279.35 1058.97 1201.47C1058.97 1123.6 1122.09 1060.47 1199.96 1060.47Z" id="Fill"/>
+<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="742.663" id="Filter" width="742.663" x="828.642" y="830.132">
+<feDropShadow dx="0" dy="-0" flood-color="#000000" flood-opacity="1" in="SourceGraphic" result="Shadow" stdDeviation="10.0258"/>
+</filter>
+<path d="M1003.97 1201.36C1003.97 1093.01 1091.81 1005.17 1200.16 1005.17C1308.51 1005.17 1396.34 1093.01 1396.34 1201.36C1396.34 1309.7 1308.51 1397.54 1200.16 1397.54C1091.81 1397.54 1003.97 1309.7 1003.97 1201.36Z" id="Fill_2"/>
+<path d="M1201.48 1049.91C1117.83 1049.91 1050.03 1117.71 1050.03 1201.36C1050.03 1285 1117.83 1352.8 1201.48 1352.8C1285.12 1352.8 1352.92 1285 1352.92 1201.36C1352.92 1117.71 1285.12 1049.91 1201.48 1049.91Z" id="Fill_3"/>
+</defs>
+<g id="background" vectornator:layerName="background">
+<g filter="url(#Filter)" vectornator:layerName="radial-sm" vectornator:shadowAngle="-1.56298" vectornator:shadowColor="#000000" vectornator:shadowOffset="0" vectornator:shadowOpacity="1" vectornator:shadowRadius="20.0516">
+<use fill="#000000" fill-opacity="0.421171" fill-rule="nonzero" stroke="none" xlink:href="#Fill"/>
+<mask height="692.534" id="StrokeMask" maskUnits="userSpaceOnUse" width="692.534" x="853.706" y="855.196">
+<rect fill="#ffffff" height="692.534" stroke="none" width="692.534" x="853.706" y="855.196"/>
+<use fill="#000000" fill-rule="evenodd" stroke="none" xlink:href="#Fill"/>
+</mask>
+<use fill="none" mask="url(#StrokeMask)" stroke="#ffffff" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20.0516" xlink:href="#Fill"/>
+</g>
+</g>
+<g id="rotary-encoder" vectornator:layerName="rotary-encoder">
+<g opacity="1" vectornator:layerName="border-edge">
+<use fill="#000000" fill-rule="nonzero" stroke="none" xlink:href="#Fill_2"/>
+<mask height="392.365" id="StrokeMask_2" maskUnits="userSpaceOnUse" width="392.365" x="1003.97" y="1005.17">
+<rect fill="#000000" height="392.365" stroke="none" width="392.365" x="1003.97" y="1005.17"/>
+<use fill="#ffffff" fill-rule="evenodd" stroke="none" xlink:href="#Fill_2"/>
+</mask>
+<use fill="none" mask="url(#StrokeMask_2)" stroke="#ffac00" stroke-linecap="round" stroke-linejoin="round" stroke-width="32.0981" xlink:href="#Fill_2"/>
+</g>
+<g opacity="1" vectornator:layerName="button">
+<use fill="#ffffff" fill-rule="nonzero" stroke="none" xlink:href="#Fill_3"/>
+<mask height="333.177" id="StrokeMask_3" maskUnits="userSpaceOnUse" width="333.177" x="1034.89" y="1034.77">
+<rect fill="#ffffff" height="333.177" stroke="none" width="333.177" x="1034.89" y="1034.77"/>
+<use fill="#000000" fill-rule="evenodd" stroke="none" xlink:href="#Fill_3"/>
+</mask>
+<use fill="none" mask="url(#StrokeMask_3)" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" stroke-width="30.2888" xlink:href="#Fill_3"/>
+</g>
+</g>
+</svg>

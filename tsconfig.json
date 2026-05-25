@@ -14,9 +14,8 @@
     "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
-      {
-        "name": "next"
-      }
+      { "name": "next" }, 
+      { "name": "next-pwa"},
     ],
     "paths": {
       "res/*": ["./src/*"],

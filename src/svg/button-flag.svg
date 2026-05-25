@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="360.0px" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 360 360" width="360.0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<path d="M180 45.1441C253.828 45.1441 313.677 104.993 313.677 178.821C313.677 252.649 253.828 312.498 180 312.498C106.172 312.498 46.3228 252.649 46.3228 178.821C46.3228 104.993 106.172 45.1441 180 45.1441Z" id="Fill"/>
+<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="382.651" id="Filter" width="382.651" x="-11.3255" y="-12.5042">
+<feDropShadow dx="0" dy="-0" flood-color="#000000" flood-opacity="1" in="SourceGraphic" result="Shadow" stdDeviation="15.0387"/>
+</filter>
+<path d="M180 45.1441C253.828 45.1441 313.677 104.993 313.677 178.821C313.677 252.649 253.828 312.498 180 312.498C106.172 312.498 46.3228 252.649 46.3228 178.821C46.3228 104.993 106.172 45.1441 180 45.1441Z" id="Fill_2"/>
+</defs>
+<clipPath id="ArtboardFrame">
+<rect height="360" width="360" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Layer-1" vectornator:layerName="Layer 1">
+<g filter="url(#Filter)" vectornator:layerName="button-bg" vectornator:shadowAngle="-1.56298" vectornator:shadowColor="#000000" vectornator:shadowOffset="0" vectornator:shadowOpacity="1" vectornator:shadowRadius="30.0774">
+<mask height="307.458" id="StrokeMask" maskUnits="userSpaceOnUse" width="307.458" x="26.2712" y="25.0925">
+<rect fill="#ffffff" height="307.458" stroke="none" width="307.458" x="26.2712" y="25.0925"/>
+<use fill="#000000" fill-rule="evenodd" stroke="none" xlink:href="#Fill"/>
+</mask>
+<use fill="none" mask="url(#StrokeMask)" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" stroke-width="40.1032" xlink:href="#Fill"/>
+</g>
+<g opacity="1" vectornator:layerName="button-bg">
+<use fill="#000000" fill-rule="nonzero" stroke="none" xlink:href="#Fill_2"/>
+<mask height="287.406" id="StrokeMask_2" maskUnits="userSpaceOnUse" width="287.406" x="36.297" y="35.1183">
+<rect fill="#ffffff" height="287.406" stroke="none" width="287.406" x="36.297" y="35.1183"/>
+<use fill="#000000" fill-rule="evenodd" stroke="none" xlink:href="#Fill_2"/>
+</mask>
+<use fill="none" mask="url(#StrokeMask_2)" stroke="#ffffff" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20.0516" xlink:href="#Fill_2"/>
+</g>
+<path d="M238.101 138.419C238.101 134.397 236.502 130.356 233.435 127.287C227.298 121.149 217.39 121.149 211.252 127.287L179.982 158.556L148.713 127.287C142.575 121.149 132.668 121.149 126.53 127.287C120.392 133.425 120.392 143.414 126.53 149.552L157.717 180.822L126.53 212.009C120.392 218.147 120.392 228.137 126.53 234.274C132.667 240.412 142.575 240.415 148.713 234.274L179.982 203.005L211.252 234.274C217.39 240.412 227.298 240.415 233.435 234.274C236.504 231.206 238.096 227.164 238.101 223.142C238.101 219.12 236.502 215.077 233.435 212.009L202.166 180.822L233.435 149.552C236.504 146.483 238.096 142.44 238.101 138.419Z" fill="#dc4c30" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="cross-path"/>
+</g>
+</svg>

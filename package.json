@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "cp-cesium": "cp -r node_modules/cesium/Build/Cesium/ public/lib/cesium",
+    "dev": "npm run cp-cesium && next dev --turbopack --experimental-https",
+    "build": "npm run cp-cesium && next build --turbopack",
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write"
@@ -23,6 +24,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
+    "next-pwa": "^5.6.0",
     "typescript": "^5"
   }
 }
