@@ -19,7 +19,14 @@
     ],
     "paths": {
       "res/*": ["./src/*"],
+      "icons/*": ["./src/app/components/icons/*"],
+      "parts/*": ["./src/app/components/*"],
+      "types/*": ["./types/*"],
+      "utils/*": ["./src/utils/*"],
+      "earth/*": ["./src/app/earth/*"],
+      "config/*": ["./src/app/config/*"],
       "styles/*": ["./src/styles/*"],
+      "constants": ["./src/app/constants.ts"],
     }
   },
   "include": [
