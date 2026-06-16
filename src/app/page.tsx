@@ -14,12 +14,10 @@ import {
   createOsmBuildingsAsync,
 } from 'cesium';
 import 'styles/modules/page.module.css';
-import CesiumGlobe from 'res/modules/CesiumGlobe';
+import Globe from 'earth/Globe';
 
 
 export default function World(): JSX.Element {
-  return <>
-    <CesiumGlobe />
-  </>;
+  return <Globe />;
 }
 
