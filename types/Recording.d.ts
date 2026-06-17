@@ -2,7 +2,7 @@ import type { Cartesian3 } from 'cesium';
 import type { FrameTelemetrySample } from './telemetry';
 
 
-export type TeleRecordingState = 'localOnly' | 'pinnedLocal' | 'propagated' | 'redlisted';
+export type TelemetryRecordingState = 'localOnly' | 'pinnedLocal' | 'propagated' | 'redlisted';
 
 export type BufferedRecording = {
   id: string;
@@ -24,14 +24,14 @@ export type BufferedRecording = {
 
 export type LocalRecordingMarker = {
   id: string;
-  state: TeleRecordingState;
+  state: TelemetryRecordingState;
   position: Cartesian3;
   pinId: string | null;
 };
 
 export type RecordingMarkerScreen = {
   id: string;
-  state: TeleRecordingState;
+  state: TelemetryRecordingState;
   x: number;
   y: number;
   pinScreen?: { x: number; y: number } | null;

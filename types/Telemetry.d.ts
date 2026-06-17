@@ -1,4 +1,4 @@
-export type DebugTelemetry = {
+export type SpatialTelemetry = {
   mode: 'viewer' | 'recorder';
   locationLock: boolean;
   recordingActive: boolean;
@@ -33,7 +33,7 @@ export type DebugTelemetry = {
   likelyOutdoors: boolean;
 };
 
-export type FrameTelemetrySample = {
+export type PerFrameTelemetry = {
   frameIndex: number;
   unixMs: number;
   performanceMs: number;
