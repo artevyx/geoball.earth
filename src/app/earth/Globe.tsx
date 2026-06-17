@@ -68,14 +68,32 @@ import {
   loadRecordingPlayback,
   revokePlaybackSession,
   saveBufferedRecordingToIndexedDb
-} from 'res/geoballDB';
+} from 'res/storage/LocalstoreDB';
 import { InlineSvgIcon } from 'icons/InlineSvgIcon';
 import { CesiumAttributionBadge } from 'parts/CesiumAttributionBadge';
 import { recordingGlyphForState } from 'res/recordingState';
-import { 
-  DEFAULT_DEBUG_TELEMETRY,
+import {
+  DEFAULT_TELEMETRY,
   DEFAULT_CAMERA_CONTROLS,
-  } from 'constants';
+} from '@constants';
+
+import {
+  SpatialTelemetry,
+  PerFrameTelemetry,
+} from 'types/Telemetry';
+import {
+  CameraControlsState,
+  ExtendedMediaTrackSettings,
+  ExtendedMediaTrackCapabilities,
+} from 'types/Camera';
+import {
+  PlaybackSession,
+  BufferedRecording,
+  LocalRecordingMarker,
+  RecordingMarkerScreen,
+  TelemetryRecordingState,
+} from 'types/Recording';
+
 import 'cesium/Build/Cesium/Widgets/widgets.css';
 import 'styles/modules/cesium-globe.module.css';
 
@@ -173,10 +191,10 @@ export default function Globe(): JSX.Element {
     motionInterval: null as number | null,
   });
 
-  const requestGeoRef = useRef<() => void>(() => {});
-  const requestSensorRef = useRef<() => void>(() => {});
-  const requestCameraRef = useRef<() => Promise<void>>(async () => {});
-  const stopCameraRef = useRef<() => void>(() => {});
+  const requestGeoRef = useRef<() => void>(() => { });
+  const requestSensorRef = useRef<() => void>(() => { });
+  const requestCameraRef = useRef<() => Promise<void>>(async () => { });
+  const stopCameraRef = useRef<() => void>(() => { });
   const arrowDegRef = useRef(0);
   const puckDraggedRef = useRef(false);
   const puckDeleteArmedRef = useRef(false);
@@ -207,7 +225,7 @@ export default function Globe(): JSX.Element {
   const [creditPanelOpen, setCreditPanelOpen] = useState(false);
 
   const [cameraControls, setCameraControls] = useState<CameraControlsState>(DEFAULT_CAMERA_CONTROLS);
-  const [debugTelemetry, setDebugTelemetry] = useState<DebugTelemetry>(DEFAULT_DEBUG_TELEMETRY);
+  const [telemetry, setTelemetry] = useState<SpatialTelemetry>(DEFAULT_TELEMETRY);
 
   const permissionsAllReady = geoReady && cameraReady && sensorReady;
 
@@ -232,14 +250,15 @@ export default function Globe(): JSX.Element {
     if (!pose || rollBaselineRef.current === null) return 0;
     const raw = rollAxisRef.current === 'portrait' ? pose.gamma : pose.beta;
     return raw - rollBaselineRef.current;
-  }, [debugTelemetry.gamma, debugTelemetry.beta, recordingActive]);
+  }, [telemetry.gamma, telemetry.beta, recordingActive]);
 
-  const createFrameTelemetrySample = (): FrameTelemetrySample => {
+  const createFrameTelemetrySample = (): PerFrameTelemetry => {
     const pose = latestPoseRef.current;
     const geo = latestGeoRef.current;
     const motion = latestMotionRef.current;
     const target = latestTargetRef.current;
-    const sample: FrameTelemetrySample = {
+
+    const frameTelemetry: PerFrameTelemetry = {
       frameIndex: frameIndexRef.current,
       unixMs: Date.now(),
       performanceMs: performance.now(),
@@ -266,15 +285,16 @@ export default function Globe(): JSX.Element {
       },
     };
     frameIndexRef.current += 1;
-    return sample;
+    return frameTelemetry;
   };
 
-  const pushDebugTelemetry = () => {
+  const pushTelemetry = () => {
     const pose = latestPoseRef.current;
     const geo = latestGeoRef.current;
     const motion = latestMotionRef.current;
     const target = latestTargetRef.current;
-    setDebugTelemetry({
+
+    setTelemetry({
       mode: recorderModeRef.current ? 'recorder' : 'viewer',
       locationLock: locationLockRef.current,
       recordingActive: recordingActiveRef.current,
@@ -523,7 +543,7 @@ export default function Globe(): JSX.Element {
   const addLocalRecordingMarker = (
     id: string,
     position: Cartesian3 | null,
-    state: TeleRecordingState = 'localOnly',
+    state: TelemetryRecordingState = 'localOnly',
   ) => {
     if (!position) return;
     const marker: LocalRecordingMarker = {
@@ -736,7 +756,7 @@ export default function Globe(): JSX.Element {
       }
     }, 100);
 
-    pushDebugTelemetry();
+    pushTelemetry();
   };
 
   const stopRecordingTake = async () => {
@@ -775,7 +795,7 @@ export default function Globe(): JSX.Element {
       bufferedRecordingRef.current = null;
       setRecordingPersistenceReady(false);
       setRecordingProgress(0);
-      pushDebugTelemetry();
+      pushTelemetry();
       return;
     }
 
@@ -786,7 +806,7 @@ export default function Globe(): JSX.Element {
       setRecordingProgress(0);
       bufferedRecordingRef.current = null;
       void playRecordingChime('saved');
-      pushDebugTelemetry();
+      pushTelemetry();
       mapEngine.current?.scene.requestRender();
     } catch (err) {
       console.error('Saving recording failed', err);
@@ -818,7 +838,7 @@ export default function Globe(): JSX.Element {
       disableLocationLockCamera();
     }
 
-    pushDebugTelemetry();
+    pushTelemetry();
   };
 
   const toggleRecording = () => {
@@ -958,9 +978,9 @@ export default function Globe(): JSX.Element {
     setRecorderMode(isRecorder);
     setLocationLock(false);
     setGateOpen(isRecorder);
-    pushDebugTelemetry();
+    pushTelemetry();
 
-    debugUpdateTimerRef.current = window.setInterval(pushDebugTelemetry, 1000 / DEBUG_CONFIG.updateHz);
+    debugUpdateTimerRef.current = window.setInterval(pushTelemetry, 1000 / DEBUG_CONFIG.updateHz);
 
     window.CESIUM_BASE_URL = '/lib/cesium';
     Ion.defaultAccessToken = process.env['NEXT_PUBLIC_CESIUM_TOKEN'] as string;
@@ -1401,7 +1421,7 @@ export default function Globe(): JSX.Element {
           // @ts-ignore
           userPoint.position = currentPosition;
           userPoint.show = true;
-          pushDebugTelemetry();
+          pushTelemetry();
           cesiumWidget.scene.requestRender();
         },
         (err) => {
@@ -1428,7 +1448,7 @@ export default function Globe(): JSX.Element {
       setSensorReady(true);
       if (!compass.absolute) setPermissionError('Compass heading is relative, not magnetic north. Motion is working, but heading may be startup-relative.');
       else setPermissionError(null);
-      pushDebugTelemetry();
+      pushTelemetry();
       cesiumWidget.scene.requestRender();
     };
 
@@ -1446,7 +1466,7 @@ export default function Globe(): JSX.Element {
         rotationGamma: event.rotationRate?.gamma ?? null,
         motionInterval: event.interval ?? null,
       };
-      pushDebugTelemetry();
+      pushTelemetry();
     };
 
     if (isRecorder) {
