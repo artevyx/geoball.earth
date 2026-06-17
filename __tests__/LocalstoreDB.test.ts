@@ -10,7 +10,7 @@ import {
   openGeoballDb,
   loadLocalRecordingMarkers,
   deleteOrRedlistRecordingInIndexedDb,
-} from '../src/geoballDB';
+} from '../src/storage/LocalstoreDB';
 import { GEOBALL_DB_NAME } from '../src/app/config/recordingConfig';
 
 
