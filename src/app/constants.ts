@@ -1,3 +1,7 @@
+import { SpatialTelemetry } from "types/Telemetry";
+import { CameraControlsState } from "types/Camera";
+
+
 export const DEFAULT_CAMERA_CONTROLS: CameraControlsState = {
   torchSupported: false,
   torchOn: false,
@@ -10,8 +14,7 @@ export const DEFAULT_CAMERA_CONTROLS: CameraControlsState = {
   focusModes: [],
   focusMode: '',
 };
-
-export const DEFAULT_DEBUG_TELEMETRY: DebugTelemetry = {
+export const DEFAULT_TELEMETRY: SpatialTelemetry = {
   mode: 'viewer',
   locationLock: false,
   recordingActive: false,
