@@ -69,7 +69,7 @@ import {
   revokePlaybackSession,
   saveBufferedRecordingToIndexedDb
 } from 'res/storage/LocalstoreDB';
-import { InlineSvgIcon } from 'icons/InlineSvgIcon';
+import { InlineSVGIcon } from 'res/app/components/icons/InlineSVGIcon';
 import { CesiumAttributionBadge } from 'parts/CesiumAttributionBadge';
 import { recordingGlyphForState } from 'res/recordingState';
 import {
@@ -1891,7 +1891,7 @@ export default function Globe(): JSX.Element {
               cursor: 'pointer',
             }}
           >
-            <InlineSvgIcon icon={icon} active />
+            <InlineSVGIcon icon={icon} active />
           </button>
         );
       })}
@@ -2015,11 +2015,11 @@ export default function Globe(): JSX.Element {
       {monocleOpen && !startupOverlayActive && recorderMode && (
         <div style={{ position: 'fixed', zIndex: 8000, left: '50%', top: monocleTop, width: '64vmin', height: '64vmin', transform: 'translate(-50%, -50%)', borderRadius: '999px', overflow: 'hidden', border: '2px solid rgba(255,255,255,0.88)', boxShadow: '0 0 0 4px rgba(0,0,0,0.85), 0 14px 60px rgba(0,0,0,0.55)', background: 'black', pointerEvents: 'none' }}>
           <video ref={videoRef} playsInline muted autoPlay style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-          <div style={{ position: 'absolute', inset: 0, opacity: 0.72 }}><InlineSvgIcon icon="recordingArea" active /></div>
+          <div style={{ position: 'absolute', inset: 0, opacity: 0.72 }}><InlineSVGIcon icon="recordingArea" active /></div>
           {recordingActive && (
             <>
-              <div style={{ position: 'absolute', inset: '12%', opacity: 0.95 }}><InlineSvgIcon icon="rollGuide" active rotateDeg={rollAxisRef.current === 'portrait' ? 0 : 90} /></div>
-              <div style={{ position: 'absolute', inset: '12%', opacity: 0.95 }}><InlineSvgIcon icon="rollAlign" active rotateDeg={(rollAxisRef.current === 'portrait' ? 0 : 90) + rollDelta} /></div>
+              <div style={{ position: 'absolute', inset: '12%', opacity: 0.95 }}><InlineSVGIcon icon="rollGuide" active rotateDeg={rollAxisRef.current === 'portrait' ? 0 : 90} /></div>
+              <div style={{ position: 'absolute', inset: '12%', opacity: 0.95 }}><InlineSVGIcon icon="rollAlign" active rotateDeg={(rollAxisRef.current === 'portrait' ? 0 : 90) + rollDelta} /></div>
             </>
           )}
         </div>
@@ -2102,7 +2102,7 @@ export default function Globe(): JSX.Element {
             cursor: 'pointer',
           }}
         >
-          <InlineSvgIcon icon="discBook" active size="82px" />
+          <InlineSVGIcon icon="discBook" active size="82px" />
         </button>
       )}
 
@@ -2140,7 +2140,7 @@ export default function Globe(): JSX.Element {
               pointerEvents: 'auto',
             }}
           >
-            <InlineSvgIcon icon="sensorHead" active={cameraEverGranted} size="72px" />
+            <InlineSVGIcon icon="sensorHead" active={cameraEverGranted} size="72px" />
           </button>
 
           {[
@@ -2172,7 +2172,7 @@ export default function Globe(): JSX.Element {
                 pointerEvents: permissionsStackOpen ? 'auto' : 'none',
               }}
             >
-              <InlineSvgIcon icon={item.icon} active={item.active} size="50px" />
+              <InlineSVGIcon icon={item.icon} active={item.active} size="50px" />
             </button>
           ))}
         </div>
@@ -2200,13 +2200,13 @@ export default function Globe(): JSX.Element {
             pointerEvents: 'auto',
           }}
         >
-          <InlineSvgIcon icon={locationLock ? 'freeviewMode' : 'focusedMode'} active size="62px" />
+          <InlineSVGIcon icon={locationLock ? 'freeviewMode' : 'focusedMode'} active size="62px" />
         </button>
       )}
 
       {!startupOverlayActive && recorderMode && (
         <div style={{ position: 'fixed', zIndex: 9000, left: '50%', bottom: '16px', width: '154px', height: '154px', transform: 'translateX(-50%)', display: 'grid', placeItems: 'center', touchAction: 'none' }}>
-          <InlineSvgIcon icon="interactronRing" active style={{ position: 'absolute', inset: 0 }} />
+          <InlineSVGIcon icon="interactronRing" active style={{ position: 'absolute', inset: 0 }} />
           {recordingActive && (
             <svg
               aria-hidden="true"
@@ -2301,7 +2301,7 @@ export default function Globe(): JSX.Element {
               touchAction: 'none',
             }}
           >
-            <InlineSvgIcon icon="interactronPuck" active={!recordingActive} size="78px" />
+            <InlineSVGIcon icon="interactronPuck" active={!recordingActive} size="78px" />
           </button>
         </div>
       )}
