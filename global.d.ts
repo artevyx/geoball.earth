@@ -9,3 +9,13 @@
 
 
 declare var CESIUM_BASE_URL: string;
+
+declare type SVGIconProps = {
+  icon: keyof typeof SVG_ICON | string,
+  active?: boolean,
+  size?: number | string,
+  rotateDeg?: number,
+  opacity?: number,
+  style?: React.CSSProperties,
+  title?: string,
+};
