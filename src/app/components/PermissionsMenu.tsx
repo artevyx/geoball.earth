@@ -1,6 +1,6 @@
 'use client';
 import { InlineSVGIcon } from 'parts/icons/InlineSVGIcon';
-import { SVG_ICON } from './icons/SVGIcons';
+import { SVG_ICON } from '@constants';
 
 
 type PermissionMenuProps = {
@@ -55,7 +55,8 @@ export function PermissionMenu({
             onClick={onRequestCamera}
             aria-label="Camera permission"
           >
-            <InlineSVGIcon svg={SVG_ICON.PermissionsCamera} />
+            {/* currently is creating an error because the SVGIconProps does not support a "svg" property */}
+            <InlineSVGIcon icon={ SVG_ICON.PermissionsCamera.toString() } />
           </button>
 
           <button
@@ -67,7 +68,8 @@ export function PermissionMenu({
             onClick={onRequestSensors}
             aria-label="Gyroscope permission"
           >
-            <InlineSVGIcon svg={SVG_ICON_LIBRARY.PermissionsGyroscope} />
+            {/* currently is creating an error because the SVGIconProps does not support a "svg" property */}
+            <InlineSVGIcon icon={ SVG_ICON.PermissionsGyroscope } />
           </button>
 
           <button
@@ -79,7 +81,11 @@ export function PermissionMenu({
             onClick={onRequestLocation}
             aria-label="Location permission"
           >
-            <InlineSVGIcon svg={SVG_ICON_LIBRARY.PermissionsLocation} />
+            {/* 
+              * currently is creating an error because the SVGIconProps does not support a "svg" property 
+              * `Type '{ svg: string }' is not assignable to type 'InstrinsicAttributes & SVGIconProps`
+            */}
+            <InlineSVGIcon icon={ SVG_ICON.PermissionsLocation } />
           </button>
         </div>
       )}
