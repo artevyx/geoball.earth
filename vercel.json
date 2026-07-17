@@ -5,5 +5,9 @@
       "memory": 1024
     }
   },
-  "routes": []
+  "routes": [
+    { "src": "/api/aerial/"   , "dest": "./api/aerial/AirTrafficData.ts" },
+    { "src": "/api/celestial/", "dest": "./api/celestial/ExoAtmosphericData.ts" },
+    { "src": "/api/maritime/" , "dest": "./api/maritime/SurfaceOceanicData.ts" }
+  ]
 }
