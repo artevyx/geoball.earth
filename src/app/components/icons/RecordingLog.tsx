@@ -20,12 +20,12 @@ export function RecordingLogIcon(): JSX.Element {
     version="1.1"
     viewBox="0 0 360 360" 
     height="100%" width="100%" 
+    fillRule='nonzero' clipRule='evenodd'
+    strokeLinecap='round' strokeLinejoin='round'
+    stroke-miterlimit="10"
     xmlSpace="preserve" 
     xmlns="http://www.w3.org/2000/svg" 
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    fillRule='nonzero' clipRule='evenodd'
-    stroke-miterlimit="10"
-    strokeLinecap='round' strokeLinejoin='round'
   >
     <defs>
       <path d={ PATH_DATA['gb-discbook-fill'] } id="gb-discbook-fill"/>
@@ -64,49 +64,50 @@ export function RecordingLogIcon(): JSX.Element {
           <rect fill="#ffffff" height="282.933" stroke="none" width="209.312" x="75.3438" y="48.5335" />
           <use fill="#000000" fill-rule="evenodd" stroke="none" xlinkHref="#gb-discbook-fill"/>
         </mask>
-        <use fill="none" mask="url(#gb-discBook-StrokeMask)" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" xlinkHref="#gb-discBook-Fill"/>
+        <use fill="none" mask="url(#gb-discbook-strokemask)" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" xlinkHref="#gb-discBook-Fill"/>
       </g>
 
       <g opacity="1">
-        <use fill="#dc4c30" fill-rule="nonzero" stroke="none" xlink:href="#gb-discBook-Fill_2"/>
+        <use fill="#dc4c30" fill-rule="nonzero" stroke="none" xlinkHref="#gb-discBook-Fill_2"/>
         <mask height="36.526" id="gb-discBook-StrokeMask_2" maskUnits="userSpaceOnUse" width="31.6208" x="103.692" y="282.902">
           <rect fill="#ffffff" height="36.526" stroke="none" width="31.6208" x="103.692" y="282.902"/>
-          <use fill="#000000" fill-rule="evenodd" stroke="none" xlink:href="#gb-discBook-Fill_2"/>
+          <use fill="#000000" fill-rule="evenodd" stroke="none" xlinkHref="#gb-discBook-Fill_2"/>
         </mask>
-        <use fill="none" mask="url(#gb-discBook-StrokeMask_2)" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" xlink:href="#gb-discBook-Fill_2"/>
+        <use fill="none" mask="url(#gb-discBook-StrokeMask_2)" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" xlinkHref="#gb-discBook-Fill_2"/>
       </g>
 
       <g opacity="1">
         <g opacity="1">
-          <use fill="#ffac00" fill-opacity="0.997759" fill-rule="nonzero" stroke="none" xlink:href="#gb-discBook-Fill_3"/>
-        <mask height="234.369" id="gb-discBook-StrokeMask_3" maskUnits="userSpaceOnUse" width="185.317" x="87.3413" y="60.5326">
-        <rect fill="#ffffff" height="234.369" stroke="none" width="185.317" x="87.3413" y="60.5326"/>
-        <use fill="#000000" fill-rule="evenodd" stroke="none" xlink:href="#gb-discBook-Fill_3"/>
-        </mask>
-        <use fill="none" mask="url(#gb-discBook-StrokeMask_3)" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" xlink:href="#gb-discBook-Fill_3"/>
+          <use fill="#ffac00" fill-opacity="0.997759" fill-rule="nonzero" stroke="none" xlinkHref="#gb-discBook-Fill_3"/>
+          <mask height="234.369" id="gb-discBook-StrokeMask_3" maskUnits="userSpaceOnUse" width="185.317" x="87.3413" y="60.5326">
+            <rect fill="#ffffff" height="234.369" stroke="none" width="185.317" x="87.3413" y="60.5326"/>
+            <use fill="#000000" fill-rule="evenodd" stroke="none" xlinkHref="#gb-discBook-Fill_3"/>
+          </mask>
+          <use fill="none" mask="url(#gb-discBook-StrokeMask_3)" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" xlinkHref="#gb-discBook-Fill_3"/>
         </g>
+
         <path d="M93.3413 66.5326L116.232 66.5326L116.232 288.902L93.3413 288.902L93.3413 66.5326Z" fill="#ffdc66" fill-opacity="0.997759" fill-rule="nonzero" opacity="1" stroke="none"/>
         <path d="M115.597 284.471C114.695 284.471 113.962 283.738 113.962 282.836L113.962 208.163C113.962 207.26 114.695 206.528 115.597 206.528C116.5 206.528 117.232 207.26 117.232 208.163L117.232 282.836C117.232 283.738 116.5 284.471 115.597 284.471ZM115.597 145.855C114.695 145.855 113.962 145.122 113.962 144.22L113.962 71.1677C113.962 70.2651 114.695 69.5326 115.597 69.5326C116.5 69.5326 117.232 70.2651 117.232 71.1677L117.232 144.22C117.232 145.122 116.5 145.855 115.597 145.855Z" fill="#1f212b" fill-rule="nonzero" opacity="1" stroke="none"/>
         </g>
         <g opacity="1">
         <g opacity="1">
-        <use fill="#ffe9ab" fill-rule="nonzero" stroke="none" xlink:href="#gb-discBook-Fill_4"/>
+        <use fill="#ffe9ab" fill-rule="nonzero" stroke="none" xlinkHref="#gb-discBook-Fill_4"/>
         <mask height="113.345" id="gb-discBook-StrokeMask_4" maskUnits="userSpaceOnUse" width="182.814" x="88.5929" y="119.564">
         <rect fill="#ffffff" height="113.345" stroke="none" width="182.814" x="88.5929" y="119.564"/>
-        <use fill="#000000" fill-rule="evenodd" stroke="none" xlink:href="#gb-discBook-Fill_4"/>
+        <use fill="#000000" fill-rule="evenodd" stroke="none" xlinkHref="#gb-discBook-Fill_4"/>
         </mask>
-        <use fill="none" mask="url(#gb-discBook-StrokeMask_4)" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" stroke-width="9.50165" xlink:href="#gb-discBook-Fill_4"/>
+        <use fill="none" mask="url(#gb-discBook-StrokeMask_4)" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" stroke-width="9.50165" xlinkHref="#gb-discBook-Fill_4"/>
         </g>
         <g opacity="1">
-        <use fill="#000000" fill-rule="nonzero" stroke="none" xlink:href="#gb-discBook-Fill_5"/>
+        <use fill="#000000" fill-rule="nonzero" stroke="none" xlinkHref="#gb-discBook-Fill_5"/>
         <mask height="88.0855" id="gb-discBook-StrokeMask_5" maskUnits="userSpaceOnUse" width="88.0855" x="135.957" y="132.2">
         <rect fill="#ffffff" height="88.0855" stroke="none" width="88.0855" x="135.957" y="132.2"/>
-        <use fill="#000000" fill-rule="evenodd" stroke="none" xlink:href="#gb-discBook-Fill_5"/>
+        <use fill="#000000" fill-rule="evenodd" stroke="none" xlinkHref="#gb-discBook-Fill_5"/>
         </mask>
-        <use fill="none" mask="url(#gb-discBook-StrokeMask_5)" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" stroke-width="6" xlink:href="#gb-discBook-Fill_5"/>
+        <use fill="none" mask="url(#gb-discBook-StrokeMask_5)" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" stroke-width="6" xlinkHref="#gb-discBook-Fill_5"/>
         </g>
         <path d="M180 157.75L185.718 169.332L198.502 171.19L189.253 180.208L191.436 192.942L180 186.928L168.567 192.942L170.751 180.208L161.498 171.19L174.282 169.332L180 157.75Z" fill="#ffffff" fill-rule="nonzero" opacity="1" stroke="none"/>
         </g>
-        </g>
-        </svg>
+      </g>
+    </svg>
 }
