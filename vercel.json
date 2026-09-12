@@ -1,10 +1,4 @@
 {
-  "functions": {
-    "api/**/*.js": {
-      "maxDuration": 60,
-      "memory": 1024
-    }
-  },
   "routes": [
     { "src": "/api/aerial/"   , "dest": "./api/aerial/AirTrafficData.ts" },
     { "src": "/api/celestial/", "dest": "./api/celestial/ExoAtmosphericData.ts" },
