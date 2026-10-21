@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Geoball (●) Earth",
+  title: "Geosphere (●) Earth",
   description: "A tool for public, open-air geospatial event recording",
 };
 
