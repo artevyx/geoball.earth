@@ -1,9 +1,9 @@
-import type { RecordingState } from '../types/recording';
+import type { TelemetryRecordingState } from '../types/Recording';
 
 export type RecordingGlyph = 'yellowSquare' | 'cyanTriangle' | 'limeAsterisk' | 'redCircle';
 export type RecordingRemovalAction = 'delete' | 'redlist';
 
-export function recordingGlyphForState(state: RecordingState): RecordingGlyph {
+export function recordingGlyphForState(state: TelemetryRecordingState): RecordingGlyph {
   switch (state) {
     case 'localOnly': return 'yellowSquare';
     case 'pinnedLocal': return 'cyanTriangle';
@@ -12,7 +12,7 @@ export function recordingGlyphForState(state: RecordingState): RecordingGlyph {
   }
 }
 
-export function removalActionForState(state: RecordingState): RecordingRemovalAction {
+export function removalActionForState(state: TelemetryRecordingState): RecordingRemovalAction {
   return state === 'localOnly' ? 'delete' : 'redlist';
 }
 
